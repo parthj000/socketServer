@@ -9,6 +9,10 @@ const io = new Server(server, {
   cors: [],
 });
 
+app.get("/",(req,res)=>{
+    res.json({message:"hello"});
+})
+
 // Serve static files from the 'public' directory
 
 // Handle WebSocket connections
