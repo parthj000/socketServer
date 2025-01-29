@@ -9,9 +9,9 @@ const io = new Server(server, {
   cors: [],
 });
 
-app.get("/",(req,res)=>{
-    res.json({message:"hello"});
-})
+
+
+
 
 // Serve static files from the 'public' directory
 
@@ -37,7 +37,12 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("hii");
+});
 const PORT = 5500;
 server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
+
+export default server;
